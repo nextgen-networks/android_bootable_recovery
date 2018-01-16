@@ -43,7 +43,7 @@
 			<text color="%header_color%">
 				<font resource="font_l"/>
 				<placement x="960" y="970" placement="5"/>
-				<text>Recovery Project %tw_version%</text>
+				<text>Recovery Project %tw_version% - by raupe @ nextgen-networks</text>
 			</text>
 		</page>
 	</pages>
