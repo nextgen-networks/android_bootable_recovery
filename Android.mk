@@ -189,6 +189,10 @@ ifeq ($(shell test $(CM_PLATFORM_SDK_VERSION) -ge 6; echo $$?),0)
     TARGET_CRYPTFS_HW_PATH := vendor/qcom/opensource/cryptfs_hw
 endif
 
+ifeq ($(shell test $(LINEAGE_PLATFORM_SDK_VERSION) -ge 7; echo $$?),0)
+    TARGET_CRYPTFS_HW_PATH := vendor/qcom/opensource/cryptfs_hw
+endif
+
 LOCAL_MODULE_PATH := $(TARGET_RECOVERY_ROOT_OUT)/sbin
 
 #ifeq ($(TARGET_RECOVERY_UI_LIB),)
