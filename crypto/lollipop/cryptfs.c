@@ -996,9 +996,7 @@ static int get_dm_crypt_version(int fd, const char *name,  int *version)
     v = (struct dm_target_versions *) &buffer[sizeof(struct dm_ioctl)];
     while (v->next) {
 #ifdef CONFIG_HW_DISK_ENCRYPTION
-        if (is_hw_fde_enabled()) {
-            flag = (!strcmp(v->name, "crypt") || !strcmp(v->name, "req-crypt"));
-        } else {
+        {
             flag = (!strcmp(v->name, "crypt"));
         }
         printf("get_dm_crypt_version flag: %i, name: '%s'\n", flag, v->name);
